@@ -4,7 +4,7 @@ Donate link: http://www.zenofshen.com/magnolia-widget/
 Tags: ma.gnolia, magnolia, widget
 Requires at least: 2.2 or Widget plugin and PHP >= 5
 Tested up to: 2.3.2
-Stable tag: 1.0
+Stable tag: 1.1
 
 
 A WordPress widget that displays Ma.gnolia bookmarks in yummy valid semantic XHTML code by parsing XML.

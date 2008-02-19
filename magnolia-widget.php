@@ -3,7 +3,7 @@
 Plugin Name: Ma.gnolia Widget
 Plugin URI: http://www.zenofshen.com/magnolia-widget/
 Description: A WordPress widget that displays Ma.gnolia bookmarks in yummy valid semantic XHTML code by parsing XML.
-Version: 1.0
+Version: 1.1
 Author: Paul Shen
 Author URI: http://www.zenofshen.com
 License: GPL (http://www.gnu.org/copyleft/gpl.html)
@@ -12,6 +12,9 @@ Notes: Requires at least PHP 5. Options for the widget are username, number of b
 
 /* Version 1.0 - initial release
  * January 23, 2008
+ *
+ * Version 1.1 - fixed bug in default template (previously used $pubDate instead of $timestamp)
+ * February 19, 2008
  */
 
 /* The HTML code that is displayed before the list of bookmarks. */
@@ -36,7 +39,7 @@ function magnoliabookmark_template($username, $link, $title, $description, $time
 			<li class="magnolia">
 				<a href="<?php echo $link; ?>" title="<?php echo $title; ?>" class="magnolia"><?php echo $title; ?></a>
 				<div class="magnolia-description"><?php echo $description; ?></div>
-				<div class="magnolia-meta"><?php echo date('F j \a\t g:i a', strtotime($pubDate)); ?></div></li>
+				<div class="magnolia-meta"><?php echo date('F j \a\t g:i a', strtotime($timestamp)); ?></div></li>
 			</li>
 <?php
 }
